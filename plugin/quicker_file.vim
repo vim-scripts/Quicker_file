@@ -52,7 +52,7 @@ def find(pwd, args, timeout):
                 p.kill()
             except:
                 pass
-        if error == 'not found' and secondSearch:
+        if not len(out) and secondSearch:
             print "second search"
             inputs = 'find '+secondSearchPath+' -type f -name "%s" '%(name)
             for ignore in ['*.pyc','*.swp','*.class']:
